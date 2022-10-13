@@ -12,8 +12,12 @@ const getEvolutions = async (number) => {
         const evolution = evolutionChain.chain;
         const evolutionsNames = [];
         evolutionsNames.push(evolution.species.name);
-        evolutionsNames.push(evolution.evolves_to[0].species.name);
-        evolutionsNames.push(evolution.evolves_to[0].evolves_to[0].species.name);
+        if (evolution.evolves_to.length > 0) {
+            evolutionsNames.push(evolution.evolves_to[0].species.name);
+            if (evolution.evolves_to[0].evolves_to.length > 0) {
+                evolutionsNames.push(evolution.evolves_to[0].evolves_to[0].species.name);
+            }
+        }
         return evolutionsNames;
     } catch (error) {
         console.log(error);
