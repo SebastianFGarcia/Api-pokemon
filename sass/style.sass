@@ -1,0 +1,110 @@
+$CatalinaBlue: #273B56
+$Chocolate: #BE6217
+$Loafer:#DBD8C5
+$Spindle : #9c9c9c
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap')
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    font-family: 'Silkscreen', sans-serif
+    background-color: $CatalinaBlue
+    color: white
+    font-size: 1.5rem
+    line-height: 1.5
+
+.container
+    .box
+        margin: 5% auto 
+        width: 700px
+        padding: 30px
+        background-color: $Chocolate
+        border-radius: 20px
+
+        .search
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 30px
+            margin-bottom: 20px
+
+            input
+                font-family: 'Silkscreen', sans-serif
+                width: 300px
+                padding: 10px
+                border: none
+                border-radius: 20px
+                font-size: 1.5rem
+                outline: none
+
+            button
+                font-family: 'Silkscreen', sans-serif
+                padding: 10px
+                border: none
+                border-radius: 20px
+                background-color: $CatalinaBlue
+                color: white
+                font-size: 1.5rem
+                cursor: pointer
+                outline: none
+
+        .pokemon
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            gap: 30px
+            .pokemon__image
+                display: flex
+                justify-content: center
+                align-items: center
+                margin-bottom: 20px
+                background-color: $Loafer
+                border-radius: 50%
+                width: 250px
+                height: 250px
+                img
+                    width: 200px
+                    height: 200px
+            .pokemon__stats
+                background-color: $Spindle
+                padding: 20px
+                border-radius: 20px
+                .pokemon__stat
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    margin-bottom: 10px
+                    .pokemon__stat__name
+                        font-size: 1.5rem
+                    .pokemon__stat__value
+                        font-size: 1.5rem
+
+            .pokemon__evolution__title
+                font-size: 2rem
+                margin-bottom: 20px
+            .pokemon__evolutions
+                grid-column: 1 / span 2
+                display: flex
+                justify-content: center
+                align-items: center
+                .pokemon__evolution
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    flex-direction: column
+                    margin: 0 20px
+                    img
+                        background-color: $Loafer
+                        border-radius: 50%
+                        padding: 10px
+                        width: 150px
+                        height: 150px
+                        img
+                            width: 100px
+                            height: 100px
+                    .pokemon__evolution__name
+                        font-size: 1.5rem
+                    
+                    
